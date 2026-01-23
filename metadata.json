@@ -1,0 +1,7 @@
+{
+  "name": "StreetFeast - Ultimate Food Truck Fleet Platform",
+  "description": "A comprehensive multipurpose food truck ecosystem featuring customer discovery, fleet management, and an advanced admin dashboard. Built with React, Tailwind CSS, and SEO-optimized structures.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
