@@ -83,11 +83,12 @@
         </div>
 
         <!-- Mobile Header + Content -->
-        <div class="flex-grow-1" style="margin-left: 280px;">
+        <div class="flex-grow-1 dashboard-main">
             <!-- Mobile Toggle -->
             <div
                 class="d-lg-none bg-white p-3 border-bottom d-flex justify-content-between align-items-center sticky-top">
-                <a href="dashboard.html" class="fw-bold text-primary text-decoration-none fs-4">TruckFleet</a>
+                <a href="index.html" class="fw-bold text-primary text-decoration-none fs-4">
+                    <span class="fs-4 fw-bold text-primary"><img src="assets/images/logo.svg" alt="Logo"></span></a>
                 <button class="btn btn-light border" type="button" data-bs-toggle="offcanvas"
                     data-bs-target="#sidebarMenu">
                     <span class="bi bi-list"></span>
@@ -108,7 +109,7 @@
 
                 <!-- Stats Cards -->
                 <div class="row g-4 mb-5">
-                    <div class="col-md-3">
+                    <div class="col-12 col-sm-6 col-xl-3">
                         <div class="card border-0 shadow-sm p-3">
                             <div class="d-flex align-items-center">
                                 <div class="bg-primary-subtle text-primary p-3 rounded-3 me-3"><i
@@ -120,7 +121,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-12 col-sm-6 col-xl-3">
                         <div class="card border-0 shadow-sm p-3">
                             <div class="d-flex align-items-center">
                                 <div class="bg-success-subtle text-success p-3 rounded-3 me-3"><i
@@ -132,7 +133,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-12 col-sm-6 col-xl-3">
                         <div class="card border-0 shadow-sm p-3">
                             <div class="d-flex align-items-center">
                                 <div class="bg-warning-subtle text-warning p-3 rounded-3 me-3"><i
@@ -144,7 +145,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-12 col-sm-6 col-xl-3">
                         <div class="card border-0 shadow-sm p-3">
                             <div class="d-flex align-items-center">
                                 <div class="bg-info-subtle text-info p-3 rounded-3 me-3"><i
@@ -241,18 +242,107 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        // Adjust main content margin on mobile
-        function adjustMargin() {
-            const mainContent = document.querySelector('.flex-grow-1');
-            if (window.innerWidth < 992) {
-                mainContent.style.marginLeft = '0';
-            } else {
-                mainContent.style.marginLeft = '280px';
+    </script>
+    <style>
+        /* ===== Ultra-Responsive Dashboard Fix (300px+) ===== */
+
+        /* ===== 300px–360px (Very Small Phones) ===== */
+        @media (max-width: 360px) {
+
+            .main-content {
+                padding: .6rem !important;
+            }
+
+            h2 {
+                font-size: 1.2rem;
+            }
+
+            h4 {
+                font-size: 1rem;
+            }
+
+            h6 {
+                font-size: .75rem;
+            }
+
+            .btn {
+                padding: 6px 10px;
+                font-size: .8rem;
+            }
+
+            .card {
+                padding: .8rem !important;
+                border-radius: 8px;
+            }
+
+            .fs-3 {
+                font-size: 1.2rem !important;
+            }
+
+            /* Stack stats nicely */
+            .row.g-4>[class*="col-"] {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+
+            /* Simplify table */
+            table {
+                font-size: .8rem;
+            }
+
+            table th:nth-child(3),
+            table td:nth-child(3),
+            table th:nth-child(6),
+            table td:nth-child(6) {
+                display: none;
             }
         }
-        window.addEventListener('resize', adjustMargin);
-        window.addEventListener('load', adjustMargin);
-    </script>
+
+        /* ===== Normal Mobile (361px–576px) ===== */
+        @media (max-width: 576px) {
+
+            .main-content {
+                padding: 1rem !important;
+            }
+
+            .card {
+                padding: 1rem !important;
+            }
+
+            .fs-3 {
+                font-size: 1.4rem !important;
+            }
+        }
+
+        /* ===== Tablet ===== */
+        @media (max-width: 768px) {
+
+            table th:nth-child(3),
+            table td:nth-child(3),
+            table th:nth-child(6),
+            table td:nth-child(6) {
+                display: none;
+            }
+        }
+
+        /* ===== Large Screen Polish ===== */
+        @media (min-width: 1400px) {
+            .main-content {
+                max-width: 1200px;
+                margin: auto;
+            }
+        }
+
+        /* Smooth hover */
+        .card {
+            transition: .25s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-3px);
+        }
+    </style>
+
 </body>
 
 </html>
