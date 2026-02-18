@@ -1,75 +1,408 @@
-
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>StreetFeast | Food Truck Fleet Platform</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
-    <style>
-      :root {
-        --primary: #ea580c; /* orange-600 */
-        --secondary: #14b8a6; /* teal-500 */
-      }
-      body {
-        font-family: 'Plus Jakarta Sans', sans-serif;
-      }
-      h1, h2, h3, h4, .font-display {
-        font-family: 'Outfit', sans-serif;
-      }
-      .rtl {
-        direction: rtl;
-      }
-      /* Custom selection color */
-      ::selection {
-        background-color: #ea580c;
-        color: white;
-      }
-      /* Smooth theme transitions */
-      .theme-transition {
-        transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
-      }
-    </style>
-    <script>
-      // Tailored Tailwind Config for the new palette
-      tailwind.config = {
-        darkMode: 'class',
-        theme: {
-          extend: {
-            colors: {
-              primary: '#ea580c',
-              secondary: '#14b8a6',
-              stone: {
-                50: '#fafaf9',
-                100: '#f5f5f4',
-                200: '#e7e5e4',
-              }
-            }
-          }
-        }
-      }
-    </script>
-  <script type="importmap">
-{
-  "imports": {
-    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
-    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
-    "react/": "https://esm.sh/react@^19.2.3/",
-    "react": "https://esm.sh/react@^19.2.3",
-    "recharts": "https://esm.sh/recharts@^3.7.0",
-    "react-router-dom": "https://esm.sh/react-router-dom@^7.12.0",
-    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2",
-    "vite": "https://esm.sh/vite@^7.3.1"
-  }
-}
-</script>
-<link rel="stylesheet" href="/index.css">
+
+<head>
+    <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Truck Fleet - Home</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
-  <body class="bg-stone-50 dark:bg-zinc-950 text-slate-900 dark:text-slate-100 theme-transition">
-    <div id="root"></div>
-  <script type="module" src="/index.tsx"></script>
+
+<body>
+
+    <!-- Header -->
+    <nav class="navbar navbar-expand-xl">
+        <div class="container-custom d-flex justify-content-between align-items-center">
+            <!-- Brand -->
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/images/logo.svg" alt="Logo">
+            </a>
+
+            <!-- Mobile Toggles -->
+            <div class="d-flex align-items-center gap-2 d-xl-none">
+                <button class="theme-toggle btn btn-link text-decoration-none p-0 border-0" id="theme-toggle-mobile">
+                    <i class="bi bi-moon-stars"></i>
+                </button>
+                <button class="navbar-toggler border-0 p-0" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#mobileMenu">
+                    <span class="bi bi-list fs-1"></span>
+                </button>
+            </div>
+
+            <!-- Desktop Menu -->
+            <div class="collapse navbar-collapse desktop-menu justify-content-center" id="navbarNav">
+                <ul class="navbar-nav mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home 1</a></li>
+                    <li class="nav-item"><a class="nav-link" href="home-2.html">Home 2</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Pages</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="services.html">Services</a></li>
+                            <li><a class="dropdown-item" href="blog.html">Blog</a></li>
+                            <li><a class="dropdown-item" href="pricing.html">Pricing</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Desktop Actions -->
+            <div class="d-none d-xl-flex align-items-center gap-3">
+                <button class="theme-toggle btn btn-link text-decoration-none p-0 border-0" id="theme-toggle">
+                    <i class="bi bi-moon-stars"></i>
+                </button>
+                <a href="login.html" class="btn btn-outline-primary btn-custom">Login</a>
+                <a href="register.html" class="btn btn-primary btn-custom">Sign Up</a>
+                <a href="dashboard.html" class="btn btn-outline-primary btn-custom">Dashboard</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Offcanvas Menu -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileMenu">
+        <div class="offcanvas-header border-bottom">
+            <h5 class="offcanvas-title fw-bold text-primary">TruckFleet</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body d-flex flex-column">
+            <ul class="navbar-nav flex-grow-1">
+                <li class="nav-item"><a class="nav-link active" href="index.html">Home 1</a></li>
+                <li class="nav-item"><a class="nav-link" href="home-2.html">Home 2</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Pages</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="services.html">Services</a></li>
+                        <li><a class="dropdown-item" href="blog.html">Blog</a></li>
+                        <li><a class="dropdown-item" href="pricing.html">Pricing</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="mt-auto d-grid gap-2">
+                <a href="login.html" class="btn btn-outline-primary">Login</a>
+                <a href="register.html" class="btn btn-primary">Sign Up</a>
+                <a href="dashboard.html" class="btn btn-outline-primary">Dashboard</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section hero-bg-1 bg-light">
+            <div class="container-custom">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 text-center">
+                        <span class="badge bg-primary-subtle text-primary mb-3 px-3 py-2 rounded-pill">Welcome to
+                            TruckFleet</span>
+                        <h1 class="hero-title mb-4">Delicious Food, <br> <span class="text-primary">Anytime,
+                                Anywhere</span></h1>
+                        <p class="lead mb-5 text-secondary">Discover the best food trucks in your city. Fresh
+                            ingredients, amazing taste, and quick service delivered right to you.</p>
+                        <div class="d-flex justify-content-center gap-3">
+                            <a href="services.html" class="btn btn-primary btn-lg">Explore Menu</a>
+                            <a href="contact.html" class="btn btn-outline-primary btn-lg">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section>
+            <div class="container-custom">
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center p-4">
+                                <i class="bi bi-truck fs-1 text-primary mb-3"></i>
+                                <h3>Fast Delivery</h3>
+                                <p class="text-secondary text-muted">We ensure your food arrives hot and fresh, right
+                                    when you need it.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center p-4">
+                                <i class="bi bi-shield-check fs-1 text-primary mb-3"></i>
+                                <h3>Hygienic Food</h3>
+                                <p class="text-secondary text-muted">Safety and hygiene are our top priorities for every
+                                    meal served.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center p-4">
+                                <i class="bi bi-wallet2 fs-1 text-primary mb-3"></i>
+                                <h3>Best Prices</h3>
+                                <p class="text-secondary text-muted">Affordable meals without compromising on quality or
+                                    taste.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Preview -->
+        <section class="bg-light">
+            <div class="container-custom">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-6">
+                        <div class="p-5 bg-white rounded-4 shadow-sm text-center">
+                            <img src="assets/images/hero4.jpg" alt="About Image" class="img-fluid">
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <h6 class="text-uppercase text-primary fw-bold mb-2">About Us</h6>
+                        <h2 class="mb-4">We Are More Than Just A Food Truck</h2>
+                        <p class="text-secondary mb-4">TruckFleet started with a simple mission: to bring gourmet street
+                            food to everyone. With a passion for culinary excellence, we've grown into a beloved
+                            community staple.</p>
+                        <ul class="list-unstyled mb-4">
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i> Fresh Ingredients
+                                Daily</li>
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i> Expert Chefs</li>
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i> Community Focused
+                            </li>
+                        </ul>
+                        <a href="about.html" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- NEW SECTION 1: Trending Now -->
+    <section class="py-5">
+        <div class="container-custom">
+            <div class="text-center mb-5">
+                <h6 class="text-primary fw-bold text-uppercase">Fan Favorites</h6>
+                <h2 class="mb-3">Trending Now</h2>
+                <p class="text-secondary">Dishes that are creating a buzz in the city right now.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=800&auto=format&fit=crop"
+                            class="menu-card-img-top" alt="Burger">
+                        <div class="card-body p-4">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <h5 class="mb-0">Epic Cheese Burger</h5>
+                                <span class="badge bg-primary rounded-pill">$12</span>
+                            </div>
+                            <p class="text-secondary small mb-3">Double patty, melted cheddar, caramelized onions, and
+                                secret sauce.</p>
+                            <button class="btn btn-outline-primary btn-sm w-100">Add to Order</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?q=80&w=800&auto=format&fit=crop"
+                            class="menu-card-img-top" alt="Pizza">
+                        <div class="card-body p-4">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <h5 class="mb-0">Woodfire Pizza</h5>
+                                <span class="badge bg-primary rounded-pill">$15</span>
+                            </div>
+                            <p class="text-secondary small mb-3">Fresh basil, mozzarella, and tomato sauce on a thin
+                                crispy crust.</p>
+                            <button class="btn btn-outline-primary btn-sm w-100">Add to Order</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=800&auto=format&fit=crop"
+                            class="menu-card-img-top" alt="BBQ">
+                        <div class="card-body p-4">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <h5 class="mb-0">Smoky BBQ Ribs</h5>
+                                <span class="badge bg-primary rounded-pill">$18</span>
+                            </div>
+                            <p class="text-secondary small mb-3">Slow-cooked rack of ribs glazed with our signature
+                                honey BBQ sauce.</p>
+                            <button class="btn btn-outline-primary btn-sm w-100">Add to Order</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW SECTION 2: Stats -->
+    <section class="stats-section py-5">
+        <div class="container-custom">
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-3 col-6">
+                    <div class="stat-item">
+                        <div class="stat-number">50+</div>
+                        <div class="stat-text">Trucks in Fleet</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="stat-item">
+                        <div class="stat-number">120</div>
+                        <div class="stat-text">Cities Covered</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="stat-item">
+                        <div class="stat-number">1M+</div>
+                        <div class="stat-text">Happy Eaters</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="stat-item">
+                        <div class="stat-number">5k</div>
+                        <div class="stat-text">5-Star Reviews</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW SECTION 3: Testimonials -->
+    <section class="bg-light py-5">
+        <div class="container-custom">
+            <div class="text-center mb-5">
+                <h6 class="text-primary fw-bold text-uppercase">Testimonials</h6>
+                <h2 class="mb-3">What Our Foodies Say</h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="User" class="testimonial-img">
+                        <p class="fst-italic text-secondary mb-3">"The best food truck experience I've ever had! The
+                            app makes it so easy to find them."</p>
+                        <h6 class="fw-bold mb-0">Sarah Jenkins</h6>
+                        <small class="text-primary">New York, NY</small>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="User" class="testimonial-img">
+                        <p class="fst-italic text-secondary mb-3">"Incredible variety and always fresh. I love
+                            tracking my favorite taco truck!"</p>
+                        <h6 class="fw-bold mb-0">Mike Ross</h6>
+                        <small class="text-primary">Chicago, IL</small>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="User" class="testimonial-img">
+                        <p class="fst-italic text-secondary mb-3">"We hired them for our wedding and it was a hit.
+                            Professional and delicious."</p>
+                        <h6 class="fw-bold mb-0">Emily White</h6>
+                        <small class="text-primary">Austin, TX</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW SECTION 4: App Download CTA -->
+    <section class="app-download-section">
+        <div class="container-custom">
+            <div class="row align-items-center">
+                <div class="col-lg-6 py-5">
+                    <h2 class="display-5 fw-bold mb-4">Track Your Food <br> In Real-Time</h2>
+                    <p class="lead mb-4 opacity-75">Download the TruckFleet app to find the nearest trucks, view live
+                        menus, and order ahead to skip the line.</p>
+                    <div class="d-flex gap-3">
+                        <button class="btn btn-light btn-lg text-dark fw-bold"><i class="bi bi-apple me-2"></i> App
+                            Store</button>
+                        <button class="btn btn-outline-light btn-lg fw-bold"><i class="bi bi-google-play me-2"></i> Play
+                            Store</button>
+                    </div>
+                </div>
+                <div class="col-lg-6 d-none d-lg-block text-center mt-auto">
+                    <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=600&auto=format&fit=crop"
+                        alt="Mobile App"
+                        class="app-mockup img-fluid rounded-top-4 shadow-lg border border-bottom-0 border-4 border-white"
+                        style="max-height: 400px; object-fit: cover;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="container-custom">
+            <div class="footer-grid">
+                <!-- Brand -->
+                <div>
+                    <a href="index.html" class="footer-brand text-primary text-decoration-none">
+                        <img src="assets/images/logo.svg" alt="Logo">
+                    </a>
+                    <p class="text-secondary mb-4">The best food truck service in town. Quality food, excellent service,
+                        and unforgettable taste.</p>
+                    <div class="d-flex gap-3 social-links">
+                        <a href="#" class="fs-5"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="fs-5"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" class="fs-5"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="fs-5"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+
+                <!-- Company -->
+                <div class="footer-links">
+                    <h5>Company</h5>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Support -->
+                <div class="footer-links">
+                    <h5>Support</h5>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Support Center</a></li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter -->
+                <div>
+                    <h5>Newsletter</h5>
+                    <p class="text-secondary mb-3">Subscribe to get the latest menu updates and offers.</p>
+                    <form action="#" class="mb-3">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Enter email" aria-label="Email">
+                            <button class="btn btn-primary" type="button">Subscribe</button>
+                        </div>
+                    </form>
+                    <p class="small text-secondary">© 2026 TruckFleet. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button id="back-to-top" class="btn btn-primary rounded-circle shadow">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
+
 </html>
