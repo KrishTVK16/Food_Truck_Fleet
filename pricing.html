@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Truck Fleet - Pricing</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <nav class="navbar navbar-expand-xl">
+        <div class="container-custom d-flex justify-content-between align-items-center">
+            <!-- Brand -->
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/images/logo.svg" alt="Logo">
+            </a>
+
+            <!-- Mobile Toggles -->
+            <div class="d-flex align-items-center gap-2 d-xl-none">
+                <button class="theme-toggle btn btn-link text-decoration-none p-0 border-0" id="theme-toggle-mobile">
+                    <i class="bi bi-moon-stars"></i>
+                </button>
+                <button class="navbar-toggler border-0 p-0" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#mobileMenu">
+                    <span class="bi bi-list fs-1"></span>
+                </button>
+            </div>
+
+            <!-- Desktop Menu -->
+            <div class="collapse navbar-collapse desktop-menu justify-content-center" id="navbarNav">
+                <ul class="navbar-nav mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home 1</a></li>
+                    <li class="nav-item"><a class="nav-link" href="home-2.html">Home 2</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" role="button"
+                            data-bs-toggle="dropdown">Pages</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="services.html">Services</a></li>
+                            <li><a class="dropdown-item" href="blog.html">Blog</a></li>
+                            <li><a class="dropdown-item active" href="pricing.html">Pricing</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Desktop Actions -->
+            <div class="d-none d-xl-flex align-items-center gap-3">
+                <button class="theme-toggle btn btn-link text-decoration-none p-0 border-0" id="theme-toggle">
+                    <i class="bi bi-moon-stars"></i>
+                </button>
+                <a href="login.html" class="btn btn-outline-primary btn-custom">Login</a>
+                <a href="register.html" class="btn btn-primary btn-custom">Sign Up</a>
+                <a href="dashboard.html" class="btn btn-outline-primary btn-custom">Dashboard</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Offcanvas Menu -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileMenu">
+        <div class="offcanvas-header border-bottom">
+            <h5 class="offcanvas-title fw-bold text-primary">TruckFleet</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body d-flex flex-column">
+            <ul class="navbar-nav flex-grow-1">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home 1</a></li>
+                <li class="nav-item"><a class="nav-link" href="home-2.html">Home 2</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle active" href="#" role="button"
+                        data-bs-toggle="dropdown">Pages</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="services.html">Services</a></li>
+                        <li><a class="dropdown-item" href="blog.html">Blog</a></li>
+                        <li><a class="dropdown-item active" href="pricing.html">Pricing</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="mt-auto d-grid gap-2">
+                <a href="login.html" class="btn btn-outline-primary">Login</a>
+                <a href="register.html" class="btn btn-primary">Sign Up</a>
+                <a href="dashboard.html" class="btn btn-outline-primary">Dashboard</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page Header -->
+    <section class="hero-bg-common py-5">
+        <div class="container-custom text-center">
+            <h1 class="display-4 fw-bold">Our Pricing</h1>
+            <p class="lead text-secondary mb-0">Transparent pricing packages to suit every budget and event size.</p>
+        </div>
+    </section>
+
+    <!-- Pricing Tables -->
+    <section>
+        <div class="container-custom">
+            <div class="row g-4 align-items-center">
+
+                <!-- Basic -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card border-0 shadow-sm p-4 text-center h-100">
+                        <h4 class="mb-3">Basic Plan</h4>
+                        <h2 class="display-4 fw-bold text-primary mb-3">$49</h2>
+                        <p class="text-secondary mb-4">Perfect for small gatherings.</p>
+                        <ul class="list-unstyled mb-4 text-start mx-auto" style="max-width: 250px;">
+                            <li class="mb-2"><i class="bi bi-check-lg text-primary me-2"></i> 2 Hour Service</li>
+                            <li class="mb-2"><i class="bi bi-check-lg text-primary me-2"></i> Up to 20 Guests</li>
+                            <li class="mb-2"><i class="bi bi-check-lg text-primary me-2"></i> Limited Menu</li>
+                            <li class="mb-2 text-muted"><i class="bi bi-x-lg me-2"></i> Custom Branding</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-outline-primary w-100">Choose Plan</a>
+                    </div>
+                </div>
+
+                <!-- Standard -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card border-primary shadow p-5 text-center h-100 position-relative">
+                        <span
+                            class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-primary px-3 py-2">Most
+                            Popular</span>
+                        <h4 class="mb-3">Standard Plan</h4>
+                        <h2 class="display-4 fw-bold text-primary mb-3">$99</h2>
+                        <p class="text-secondary mb-4">Ideal for corporate events.</p>
+                        <ul class="list-unstyled mb-4 text-start mx-auto" style="max-width: 250px;">
+                            <li class="mb-2"><i class="bi bi-check-lg text-primary me-2"></i> 4 Hour Service</li>
+                            <li class="mb-2"><i class="bi bi-check-lg text-primary me-2"></i> Up to 50 Guests</li>
+                            <li class="mb-2"><i class="bi bi-check-lg text-primary me-2"></i> Full Menu</li>
+                            <li class="mb-2"><i class="bi bi-check-lg text-primary me-2"></i> Priority Support</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-primary w-100">Choose Plan</a>
+                    </div>
+                </div>
+
+                <!-- Premium -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card border-0 shadow-sm p-4 text-center h-100">
+                        <h4 class="mb-3">Premium Plan</h4>
+                        <h2 class="display-4 fw-bold text-primary mb-3">$199</h2>
+                        <p class="text-secondary mb-4">For large weddings and galas.</p>
+                        <ul class="list-unstyled mb-4 text-start mx-auto" style="max-width: 250px;">
+                            <li class="mb-2"><i class="bi bi-check-lg text-primary me-2"></i> 8 Hour Service</li>
+                            <li class="mb-2"><i class="bi bi-check-lg text-primary me-2"></i> Unlimited Guests</li>
+                            <li class="mb-2"><i class="bi bi-check-lg text-primary me-2"></i> Custom Menu & Branding
+                            </li>
+                            <li class="mb-2"><i class="bi bi-check-lg text-primary me-2"></i> Dedicated Manager</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-outline-primary w-100">Choose Plan</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Trusted By -->
+    <section class="bg-light">
+        <div class="container-custom">
+            <div class="text-center mb-5">
+                <p class="text-secondary fw-bold text-uppercase ls-2">Trusted by top companies</p>
+            </div>
+            <div class="row g-4 justify-content-center align-items-center opacity-75">
+                <div class="col-6 col-md-3 text-center">
+                    <img src="https://placehold.co/150x50?text=Company+A" class="img-fluid grayscale" alt="Company A">
+                </div>
+                <div class="col-6 col-md-3 text-center">
+                    <img src="https://placehold.co/150x50?text=Company+B" class="img-fluid grayscale" alt="Company B">
+                </div>
+                <div class="col-6 col-md-3 text-center">
+                    <img src="https://placehold.co/150x50?text=Company+C" class="img-fluid grayscale" alt="Company C">
+                </div>
+                <div class="col-6 col-md-3 text-center">
+                    <img src="https://placehold.co/150x50?text=Company+D" class="img-fluid grayscale" alt="Company D">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing FAQ -->
+    <section>
+        <div class="container-custom">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="text-center mb-5">
+                        <h2 class="mb-3">Pricing FAQ</h2>
+                        <p class="text-secondary">Clear answers to your money questions.</p>
+                    </div>
+                    <div class="accordion" id="pricingAccordion">
+                        <div class="accordion-item border-0 shadow-sm mb-3 rounded-3 overflow-hidden">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed fw-bold" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#p1">
+                                    Are there any hidden fees?
+                                </button>
+                            </h2>
+                            <div id="p1" class="accordion-collapse collapse" data-bs-parent="#pricingAccordion">
+                                <div class="accordion-body text-secondary">
+                                    No, we believe in transparent pricing. The price you see includes all basic service
+                                    charges. Gratuity is optional but appreciated.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item border-0 shadow-sm mb-3 rounded-3 overflow-hidden">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed fw-bold" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#p2">
+                                    What is the cancellation policy?
+                                </button>
+                            </h2>
+                            <div id="p2" class="accordion-collapse collapse" data-bs-parent="#pricingAccordion">
+                                <div class="accordion-body text-secondary">
+                                    You can cancel up to 48 hours before the event for a full refund. Cancellations
+                                    within 48 hours may incur a 50% fee.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item border-0 shadow-sm mb-3 rounded-3 overflow-hidden">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed fw-bold" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#p3">
+                                    Do you offer custom packages?
+                                </button>
+                            </h2>
+                            <div id="p3" class="accordion-collapse collapse" data-bs-parent="#pricingAccordion">
+                                <div class="accordion-body text-secondary">
+                                    Yes, for large events or specific requirements, please contact us for a custom quote
+                                    tailored to your needs.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container-custom">
+            <div class="footer-grid">
+                <!-- Brand -->
+                <div>
+                    <a href="index.html" class="footer-brand text-primary text-decoration-none">
+                        <img src="assets/images/logo.svg" alt="Logo">
+                    </a>
+                    <p class="text-secondary mb-4">The best food truck service in town. Quality food, excellent service,
+                        and unforgettable taste.</p>
+                    <div class="d-flex gap-3 social-links">
+                        <a href="#" class="fs-5"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="fs-5"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" class="fs-5"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="fs-5"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+
+                <!-- Company -->
+                <div class="footer-links">
+                    <h5>Company</h5>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Support -->
+                <div class="footer-links">
+                    <h5>Support</h5>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Support Center</a></li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter -->
+                <div>
+                    <h5>Newsletter</h5>
+                    <p class="text-secondary mb-3">Subscribe to get the latest menu updates and offers.</p>
+                    <form action="#" class="mb-3">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Enter email" aria-label="Email">
+                            <button class="btn btn-primary" type="button">Subscribe</button>
+                        </div>
+                    </form>
+                    <p class="small text-secondary">© 2026 TruckFleet. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <button id="back-to-top" class="btn btn-primary rounded-circle shadow"><i class="bi bi-arrow-up"></i></button>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

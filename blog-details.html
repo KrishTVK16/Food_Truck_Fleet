@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Truck Fleet - Blog Details</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <!-- Header (Identical) -->
+    <nav class="navbar navbar-expand-xl">
+        <div class="container-custom d-flex justify-content-between align-items-center">
+            <!-- Brand -->
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/images/logo.svg" alt="Logo">
+            </a>
+
+            <!-- Mobile Toggles -->
+            <div class="d-flex align-items-center gap-2 d-xl-none">
+                <button class="theme-toggle btn btn-link text-decoration-none p-0 border-0" id="theme-toggle-mobile">
+                    <i class="bi bi-moon-stars"></i>
+                </button>
+                <button class="navbar-toggler border-0 p-0" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#mobileMenu">
+                    <span class="bi bi-list fs-1"></span>
+                </button>
+            </div>
+
+            <!-- Desktop Menu -->
+            <div class="collapse navbar-collapse desktop-menu justify-content-center" id="navbarNav">
+                <ul class="navbar-nav mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home 1</a></li>
+                    <li class="nav-item"><a class="nav-link" href="home-2.html">Home 2</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" role="button"
+                            data-bs-toggle="dropdown">Pages</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="services.html">Services</a></li>
+                            <li><a class="dropdown-item active" href="blog.html">Blog</a></li>
+                            <li><a class="dropdown-item" href="pricing.html">Pricing</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Desktop Actions -->
+            <div class="d-none d-xl-flex align-items-center gap-3">
+                <button class="theme-toggle btn btn-link text-decoration-none p-0 border-0" id="theme-toggle">
+                    <i class="bi bi-moon-stars"></i>
+                </button>
+                <a href="login.html" class="btn btn-outline-primary btn-custom">Login</a>
+                <a href="register.html" class="btn btn-primary btn-custom">Sign Up</a>
+                <a href="dashboard.html" class="btn btn-outline-primary btn-custom">Dashboard</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Offcanvas Menu -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileMenu">
+        <div class="offcanvas-header border-bottom">
+            <h5 class="offcanvas-title fw-bold text-primary">TruckFleet</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body d-flex flex-column">
+            <ul class="navbar-nav flex-grow-1">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home 1</a></li>
+                <li class="nav-item"><a class="nav-link" href="home-2.html">Home 2</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle active" href="#" role="button"
+                        data-bs-toggle="dropdown">Pages</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="services.html">Services</a></li>
+                        <li><a class="dropdown-item active" href="blog.html">Blog</a></li>
+                        <li><a class="dropdown-item" href="pricing.html">Pricing</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="mt-auto d-grid gap-2">
+                <a href="login.html" class="btn btn-outline-primary">Login</a>
+                <a href="register.html" class="btn btn-primary">Sign Up</a>
+                <a href="dashboard.html" class="btn btn-outline-primary">Dashboard</a>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Page Header -->
+    <section class="hero-bg-common py-5">
+        <div class="container-custom text-center">
+            <h1 class="display-4 fw-bold">Top 10 Street Foods</h1>
+            <p class="lead text-secondary mb-0">Dive deeper into our stories and culinary adventures.</p>
+        </div>
+    </section>
+
+    <!-- Details Content -->
+    <section>
+        <div class="container-custom">
+            <div class="row g-5">
+                <div class="col-lg-8">
+                    <img src="https://placehold.co/800x400?text=Blog+Header" class="img-fluid rounded-4 mb-4"
+                        alt="Blog Detail">
+                    <div class="d-flex gap-3 text-secondary small mb-4">
+                        <span><i class="bi bi-person me-1"></i> Admin</span>
+                        <span><i class="bi bi-calendar me-1"></i> Oct 24, 2026</span>
+                        <span><i class="bi bi-tags me-1"></i> Food, Lifestyle</span>
+                    </div>
+                    <div class="blog-content">
+                        <p class="lead mb-4">Street food is the heart and soul of any city. In this post, we explore the
+                            top 10 must-try street foods that are taking the culinary world by storm.</p>
+                        <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
+                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <blockquote class="blockquote bg-light p-4 rounded border-start border-4 border-primary mb-4">
+                            <p class="mb-0 fst-italic">"Food is symbolic of love when words are inadequate."</p>
+                        </blockquote>
+                        <p class="mb-4">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                            fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+                            officia deserunt mollit anim id est laborum.</p>
+                    </div>
+
+                    <hr class="my-5">
+
+                    <!-- Comments -->
+                    <h3 class="mb-4">Comments (3)</h3>
+                    <div class="d-flex mb-4">
+                        <img src="https://placehold.co/50x50" class="rounded-circle me-3" alt="User">
+                        <div>
+                            <h6 class="fw-bold mb-1">Alice Green</h6>
+                            <small class="text-secondary d-block mb-2">Oct 25, 2026</small>
+                            <p class="mb-0">Great article! I love tacos too.</p>
+                        </div>
+                    </div>
+                    <div class="d-flex mb-4">
+                        <img src="https://placehold.co/50x50" class="rounded-circle me-3" alt="User">
+                        <div>
+                            <h6 class="fw-bold mb-1">Bob White</h6>
+                            <small class="text-secondary d-block mb-2">Oct 26, 2026</small>
+                            <p class="mb-0">Very informative. Thanks for sharing.</p>
+                        </div>
+                    </div>
+
+                    <!-- Comment Form -->
+                    <div class="bg-light p-4 rounded-4 mt-5">
+                        <h4 class="mb-3">Leave a Comment</h4>
+                        <form>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" placeholder="Name">
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="email" class="form-control" placeholder="Email">
+                                </div>
+                                <div class="col-12">
+                                    <textarea class="form-control" rows="4" placeholder="Your Comment"></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-primary">Post Comment</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Sidebar (Identical to Blog) -->
+                <div class="col-lg-4">
+                    <div class="card border-0 shadow-sm p-4 mb-4">
+                        <h4 class="mb-3">Search</h4>
+                        <form action="#">
+                            <div class="input-group"><input type="text" class="form-control"
+                                    placeholder="Search..."><button class="btn btn-primary" type="submit"><i
+                                        class="bi bi-search"></i></button></div>
+                        </form>
+                    </div>
+                    <div class="card border-0 shadow-sm p-4 mb-4">
+                        <h4 class="mb-3">Categories</h4>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><a href="#"
+                                    class="text-decoration-none text-secondary d-flex justify-content-between"><span>Food
+                                        Trends</span> <span>(5)</span></a></li>
+                            <li class="mb-2"><a href="#"
+                                    class="text-decoration-none text-secondary d-flex justify-content-between"><span>Recipes</span>
+                                    <span>(8)</span></a></li>
+                        </ul>
+                    </div>
+                    <div class="card border-0 shadow-sm p-4">
+                        <h4 class="mb-3">Recent Posts</h4>
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="https://placehold.co/60x60" class="rounded me-3" alt="Thumb">
+                            <div>
+                                <h6 class="mb-1"><a href="#" class="text-decoration-none text-dark">Best Burgers</a>
+                                </h6><small class="text-secondary">Oct 15, 2026</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container-custom">
+            <div class="footer-grid">
+                <!-- Brand -->
+                <div>
+                    <a href="index.html" class="footer-brand text-primary text-decoration-none">
+                        <img src="assets/images/logo.svg" alt="Logo">
+                    </a>
+                    <p class="text-secondary mb-4">The best food truck service in town. Quality food, excellent service,
+                        and unforgettable taste.</p>
+                    <div class="d-flex gap-3 social-links">
+                        <a href="#" class="fs-5"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="fs-5"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" class="fs-5"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="fs-5"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+
+                <!-- Company -->
+                <div class="footer-links">
+                    <h5>Company</h5>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Support -->
+                <div class="footer-links">
+                    <h5>Support</h5>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Support Center</a></li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter -->
+                <div>
+                    <h5>Newsletter</h5>
+                    <p class="text-secondary mb-3">Subscribe to get the latest menu updates and offers.</p>
+                    <form action="#" class="mb-3">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Enter email" aria-label="Email">
+                            <button class="btn btn-primary" type="button">Subscribe</button>
+                        </div>
+                    </form>
+                    <p class="small text-secondary">© 2026 TruckFleet. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <button id="back-to-top" class="btn btn-primary rounded-circle shadow"><i class="bi bi-arrow-up"></i></button>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
