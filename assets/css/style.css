@@ -208,20 +208,8 @@ section {
     }
 }
 
-/* Small Desktop (1024px - 1200px) */
-@media (min-width: 1024px) and (max-width: 1199px) {
-    .navbar-nav {
-        gap: 1rem;
-    }
-
-    .btn-custom {
-        padding: 8px 16px;
-        font-size: 0.9rem;
-    }
-}
-
-/* Mobile & Tablet (< 1024px) */
-@media (max-width: 1023px) {
+/* Mobile & Tablet (< 1200px) */
+@media (max-width: 1199px) {
     .desktop-menu {
         display: none !important;
     }
@@ -346,7 +334,8 @@ footer {
 
 .footer-links h5,
 .footer-brand p,
-.small.text-secondary {
+.small.text-secondary,
+footer h5 {
     color: #fff;
 }
 
